@@ -8,9 +8,9 @@ setup(
   author = 'Michael Valancius, Evan Poworoznek',                   
   author_email = 'mvalancius18@gmail.com',      
   url = 'https://github.com/mvalancius',   
-  download_url = 'https://github.com/mvalancius/vbae/archive/v_02.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/mvalancius/fvbae/archive/v_01.tar.gz',    
   keywords = ['Autoencoder', 'MNIST', 'Variational'],   
-  install_requires=[            # I get to this in a second
+  install_requires=[            
           'numpy',
           'keras',
       ],
@@ -18,7 +18,7 @@ setup(
     'Development Status :: 3 - Alpha',     
     'Intended Audience :: Developers',      
     'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   # Again, pick a license
+    'License :: OSI Approved :: MIT License',  
     'Programming Language :: Python :: 3',      
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
