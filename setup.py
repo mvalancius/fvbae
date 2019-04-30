@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'fvbae',         
   packages = ['fvbae'],   
-  version = '0.1',      
+  version = '0.2',      
   license='MIT',        
   description = 'Keras Implementation of Variable Bayesian Autoencoder (Kingma and Welling, 2014)',  
   author = 'Michael Valancius, Evan Poworoznek',                   
   author_email = 'mvalancius18@gmail.com',      
   url = 'https://github.com/mvalancius',   
-  download_url = 'https://github.com/mvalancius/fvbae/archive/v_01.tar.gz',    
+  download_url = 'https://github.com/mvalancius/fvbae/archive/v_02.tar.gz',    
   keywords = ['Autoencoder', 'MNIST', 'Variational'],   
   install_requires=[            
           'numpy',
