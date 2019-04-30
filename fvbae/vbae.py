@@ -3,7 +3,7 @@ import keras
 import numpy as np
 
 def vae(Xtrain, nndim = 200, latentdim = int(2), samplestd = 1.0,
-        epochs = int(10), batch_size = int(100), optimizer = "Adamax", return_type = "all"):
+        epochs = int(10), batch_size = int(100), optimizer = "Adamax", return_type = "all", verbose=1):
     """
     vae(Xtrain, nndim = 200, latentdim = int(2), samplestd = 1.0, epochs = int(10), batch_size = int(100), optimizer = "Adamax", return_type = "all")
     
@@ -31,6 +31,8 @@ def vae(Xtrain, nndim = 200, latentdim = int(2), samplestd = 1.0,
         Either "autoencoder", "encoder", "decoder" or other string / None.
         Allows for the return of only one of the Keras objects. If none of
         "autoencoder", "encoder", or "decoder" is specified, all are returned.
+    verbose : integer of type 0, 1, or 2
+        Controls Keras progress output. 0 is no output, 1 shows status bar, and 2 shows epoch
         
     Returns
     -----------
@@ -118,7 +120,7 @@ def vae(Xtrain, nndim = 200, latentdim = int(2), samplestd = 1.0,
 
     autoencoder.compile(optimizer = optimizer, loss = AEVBloss)
 
-    autoencoder.fit(x = Xtrain, y = Xtrain, epochs = epochs, batch_size = batch_size)
+    autoencoder.fit(x = Xtrain, y = Xtrain, epochs = epochs, batch_size = batch_size, verbose = verbose)
     
     ### Allowing for different return objects
     if return_type == "autoencoder":
